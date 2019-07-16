@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+        background-color:Blue;
+        }
+        h1{
+        text-align: center;
+        font-family: "Times New Roman";
+        color:Black;
+        font-size:50px;
+        }
+        .container {
+        font-family :"Arial";
+        font-size:20px;
+        line-height:1.6;
+        font-style:Italic;
+        }
+        input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 5px ;
+  display: inline-block;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+        label {
+        margin-left: 10px;
+    padding-top: 10px;
+    }
+    input[type=submit]{
+padding:10px 30px;
+font-size:20px;
+ border: 5px solid black;
+ line-height:1.2;
+
+}
+
+
+    </style>
+</head>
+<body>
+
+<h1>SignUP</h1>
+
+
+<form action="signup" method="POST">
+     {% csrf_token %}
+   <div class="container">
+
+<center><label for "username"><br> UserName </br></label>
+
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <label for "password"><br> Password </br></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    <label for "email"><br>Email</br></label>
+    <input type="text" placeholder="Enter the email" name="email" required>
+    <br><input type="submit"></input></br><br>
+
+    </center>
+
+
+<center><button><a href="signin">Back</a></button></center>
+   </div>
+</form>
+
+</body>
+</html>
